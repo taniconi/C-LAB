@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>時間割</title>
+        <link rel="stylesheet" href="../styles/main.css">
+        <script src="../other/script.js"></script>
+        <style>
+            table {
+                width: 100%;
+                margin-top: 20px;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.3);
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            th, td {
+                padding: 12px;
+                text-align: center;
+            }
+        
+            th:first-child, td:first-child {
+                width: 10px; 
+            }
+            
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+        
+            .header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+        
+            .header img {
+                margin-right: 30px;
+                margin-bottom: 2px;
+            }
+        
+            @media (max-width: 600px) {
+                th, td {
+                    font-size: 10px;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../pictures/back.svg" class="back-button" onclick="location.href='../index.html'">
+            <h1>時間割</h1>
+        </div>
+        <select id="classSelect" onchange="updateSchedule()">
+            <option value="">クラスを選択してください</option>
+            <option value="HR11">HR11</option>
+            <option value="HR12">HR12</option>
+            <option value="HR13">HR13</option>
+            <option value="HR14">HR14</option>
+            <option value="HR15">HR15</option>
+            <option value="HR16">HR16</option>
+            <option value="HR21">HR21</option>
+            <option value="HR22">HR22</option>
+            <option value="HR23">HR23</option>
+            <option value="HR24">HR24</option>
+            <option value="HR25">HR25</option>
+            <option value="HR26">HR26</option>
+            <option value="HR31">HR31</option>
+            <option value="HR32">HR32</option>
+            <option value="HR33">HR33</option>
+            <option value="HR34">HR34</option>
+            <option value="HR35">HR35</option>
+            <option value="HR36">HR36</option>
+        </select>
+        
+        <table>
+            <tr>
+                <th></th>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td id="mon1"></td>
+                <td id="tue1"></td>
+                <td id="wed1"></td>
+                <td id="thu1"></td>
+                <td id="fri1"></td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td id="mon2"></td>
+                <td id="tue2"></td>
+                <td id="wed2"></td>
+                <td id="thu2"></td>
+                <td id="fri2"></td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td id="mon3"></td>
+                <td id="tue3"></td>
+                <td id="wed3"></td>
+                <td id="thu3"></td>
+                <td id="fri3"></td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td id="mon4"></td>
+                <td id="tue4"></td>
+                <td id="wed4"></td>
+                <td id="thu4"></td>
+                <td id="fri4"></td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td id="mon5"></td>
+                <td id="tue5"></td>
+                <td id="wed5"></td>
+                <td id="thu5"></td>
+                <td id="fri5"></td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td id="mon6"></td>
+                <td id="tue6"></td>
+                <td id="wed6"></td>
+                <td id="thu6"></td>
+                <td id="fri6"></td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td id="mon7"></td>
+                <td id="tue7"></td>
+                <td id="wed7"></td>
+                <td id="thu7"></td>
+                <td id="fri7"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

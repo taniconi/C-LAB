@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="apple-mobile-web-app-title" content="C:LAB">
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="pictures/calendar.png">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="other/script.js"></script>
+        <title>C:LAB</title>
+    </head>
+    <body>
+        <header>
+            <div class="title" onclick="window.location.href='index.html';">C:LAB</div>
+            <div>
+                <input type="checkbox" id="hamburger-checkbox">
+                <label class="hamburger" for="hamburger-checkbox">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+                <div class="menu">
+                    <nav onclick="window.location.href='pages/schedule.html';">時間割</nav>
+                    <nav onclick="window.location.href='pages/calendar.html';">行事予定</nav>
+                    <nav onclick="window.location.href='pages/maps.html';">校内マップ</nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="tile-container">
+
+                <div class="tile">
+                    <h3 onclick="window.location.href='pages/schedule.html';">きょうの時間割</h3>
+                    <select id="class-select"></select>
+                    <select id="day-select">
+                        <option value="月">月</option>
+                        <option value="火">火</option>
+                        <option value="水">水</option>
+                        <option value="木">木</option>
+                        <option value="金">金</option>
+                    </select>
+                    <div id="schedule-container"></div>
+                </div>
+
+                <div class="tile">
+                    <h3 onclick="window.location.href='pages/calendar.html';">つぎの予定</h3>
+                    <div id="event-container"></div>
+                </div>
+
+                <div class="tile apps-tile">
+                    <h3 style="opacity: 1; cursor: default;">Apps</h3>
+                    <div class="apps-grid">
+                        <div onclick="window.location.href='pages/calendar.html';">
+                            <img src="pictures/calendar.png" alt="行事予定">
+                            <p>行事予定</p>
+                        </div>
+                        <div onclick="window.location.href='pages/lost.html';">
+                            <img src="pictures/lost.png" alt="落とし物">
+                            <p>落とし物</p>
+                        </div>
+                        <div onclick="window.location.href='pages/maps.html';">
+                            <img src="pictures/maps.png" alt="校内マップ">
+                            <p>校内マップ</p>
+                        </div>
+                        <div onclick="window.location.href='pages/schedule.html';">
+                            <img src="pictures/schedule.png" alt="時間割">
+                            <p>時間割</p>
+                        </div>
+                    </div>
+                </div>
+    </body>
+</html> 
