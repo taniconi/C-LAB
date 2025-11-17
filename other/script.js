@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
             showScheduleSkeleton();
             try {
                 // Google スプレッドシート（CSV）を一次ソースとして取得
-                const res = await fetch('ここにCSVファイルを指定', { cache: 'no-store' });
+                const res = await fetch('https://docs.google.com/spreadsheets/d/1jnZur6rYTWb4CHCoZdEAuXhcdS2ldHwWF7vuVwHiBl8/export?format=csv&gid=1657705355', { cache: 'no-store' });
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const text = await res.text();
                 const rows = parseCSV(text);
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return dt;
             }
 
-            const CALENDAR_CSV_URL = 'ここにCSVファイルを指定';
+            const CALENDAR_CSV_URL = 'https://docs.google.com/spreadsheets/d/1jnZur6rYTWb4CHCoZdEAuXhcdS2ldHwWF7vuVwHiBl8/export?format=csv&gid=1530209830';
 
             function loadCalendarCSV() {
                 return fetch(CALENDAR_CSV_URL, { cache: 'no-store' })
@@ -455,7 +455,7 @@ document.addEventListener('DOMContentLoaded', function() {
         async function tryFetchLocalSchedule() {
             try {
                 // Google スプレッドシート（CSV）を一次ソースとして取得
-                const res = await fetch('ここにCSVファイルを指定', { cache: 'no-store' });
+                const res = await fetch('https://docs.google.com/spreadsheets/d/1jnZur6rYTWb4CHCoZdEAuXhcdS2ldHwWF7vuVwHiBl8/export?format=csv&gid=1657705355', { cache: 'no-store' });
                 if (!res.ok) throw new Error('HTTP ' + res.status);
                 const text = await res.text();
                 await initFromCSVText(text);
@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         }
 
-        const CALENDAR_CSV_URL = 'ここにCSVファイルを指定';
+        const CALENDAR_CSV_URL = 'https://docs.google.com/spreadsheets/d/1jnZur6rYTWb4CHCoZdEAuXhcdS2ldHwWF7vuVwHiBl8/export?format=csv&gid=1530209830';
 
         function loadCalendarCSV() {
             return fetch(CALENDAR_CSV_URL, { cache: 'no-store' })
